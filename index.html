@@ -9,16 +9,76 @@
 </head>
 <body>
 <div class="title-box">
-    <div class="letter1">С</div>
-    <div class="letter2">о</div>
-    <div class="letter3">к</div>
-    <div class="4letter">о</div>
-    <div class="5letter">л</div>
-    <div class="6letter">о</div>
-    <div class="7letter">в</div>
+    <div class="letter letter1">С</div>
+    <div class="letter letter2">о</div>
+    <div class="letter letter3">к</div>
+    <div class="letter letter4">о</div>
+    <div class="letter letter5">л</div>
+    <div class="letter letter6">о</div>
+    <div class="letter letter7">в</div>
+    <div class="line"></div>
 </div>
 
 <script src="anime.min.js"></script>
-<script src="script.js"></script>
+<script>
+    const letter1 = document.querySelector('.letter1'),
+        letter2 = document.querySelector('.letter2'),
+        letter3 = document.querySelector('.letter3'),
+        letter4 = document.querySelector('.letter4'),
+        letter5 = document.querySelector('.letter5'),
+        letter6 = document.querySelector('.letter6'),
+        letter7 = document.querySelector('.letter7'),
+        line = document.querySelector('.line');
+
+    anime({
+        targets: line,
+        width: '100%', // -> from '28px' to '100%',
+        height: '20px',
+        easing: 'easeInOutQuad',
+        direction: 'alternate',
+        backgroundColor: '#cccccc',
+        loop: true
+    });
+
+
+    const p = new Promise(function(resolve, reject) {
+        anime({
+            targets: letter1,
+            translateY: -250,
+            scale: 3,
+            duration: 500
+        });
+
+        resolve();
+    });
+
+    p.then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(()=> {
+                anime({
+                    targets: letter2,
+                    translateY: -250,
+                    scale: 1,
+                });
+                resolve();
+            }, 300)
+        })
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                anime({
+                    targets: letter3,
+                    translateY: -250,
+                    translateX: -10,
+                    scale: 1,
+                    rotateZ: '1turn',
+                    width: '100%'
+                });
+                resolve();
+            }, 300)
+        });
+
+    })
+</script>
 </body>
 </html>

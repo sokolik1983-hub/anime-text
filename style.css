@@ -1,22 +1,26 @@
 body {
-    background-color: #lightblue;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
+    background-color: #232323;
+    color: #fff;
 }
 .title-box {
-    background-color: #fff;
     display: flex;
     padding: 50px;
 }
-.title-box div {
+.letter {
     font-size: 40px;
     padding: 10px;
-    background-color: transparent;
-    transform: scale(.1)
 }
 .letter3 {
     width: 20px;
+}
+.line {
+    width: 500px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fff;
 }
