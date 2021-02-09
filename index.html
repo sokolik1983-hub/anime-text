@@ -5,7 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
 
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
 <div class="title-box">
@@ -16,7 +16,21 @@
     <div class="letter letter5">л</div>
     <div class="letter letter6">о</div>
     <div class="letter letter7">в</div>
-    <div class="line"></div>
+
+    <div class="letter letter8">А</div>
+    <div class="letter letter9">л</div>
+    <div class="letter letter10">е</div>
+    <div class="letter letter11">к</div>
+    <div class="letter letter12">с</div>
+    <div class="letter letter13">е</div>
+    <div class="letter letter14">й</div>
+    <div class="line-cont">
+        <div class="line"></div>
+    </div><br>
+    <div class="vacancy-box">
+        <div class="item-box item-box1">F</div>
+        <div class="item-box item-box2">R</div>
+    </div>
 </div>
 
 <script src="anime.min.js"></script>
@@ -28,33 +42,55 @@
         letter5 = document.querySelector('.letter5'),
         letter6 = document.querySelector('.letter6'),
         letter7 = document.querySelector('.letter7'),
+        letter8 = document.querySelector('.letter8'),
+        letter9 = document.querySelector('.letter9'),
+        letter10 = document.querySelector('.letter10'),
+        letter11 = document.querySelector('.letter11'),
+        letter12 = document.querySelector('.letter12'),
+        letter13 = document.querySelector('.letter13'),
+        letter14 = document.querySelector('.letter14'),
+        itemBox1 = document.querySelector('.item-box1'),
         line = document.querySelector('.line');
+
 
     anime({
         targets: line,
-        width: '100%', // -> from '28px' to '100%',
-        height: '20px',
-        easing: 'easeInOutQuad',
-        direction: 'alternate',
+        width:  '100%', // -> from '28px' to '100%',
+        height: '5px',
+        easing: 'linear',
         backgroundColor: '#cccccc',
-        loop: true
+        duration: '4400'
+    });
+    anime({
+        targets: itemBox1,
+        scale: {
+            value: 2,
+            duration: 300,
+            easing: 'easeInOutQuart'
+        },
+        rotate: {
+            value: -20,
+            easing: 'easeInOutSine'
+        },
+
     });
 
 
     const p = new Promise(function(resolve, reject) {
+        letter1.classList.add('active');
         anime({
             targets: letter1,
             translateY: -250,
             scale: 3,
-            duration: 500
+            duration: 500,
         });
-
         resolve();
     });
 
     p.then(() => {
         return new Promise((resolve, reject) => {
             setTimeout(()=> {
+                letter2.classList.add('active');
                 anime({
                     targets: letter2,
                     translateY: -250,
@@ -66,19 +102,170 @@
     }).then(() => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
+                letter3.classList.add('active');
                 anime({
                     targets: letter3,
                     translateY: -250,
                     translateX: -10,
                     scale: 1,
                     rotateZ: '1turn',
-                    width: '100%'
                 });
                 resolve();
             }, 300)
         });
 
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter4.classList.add('active');
+                anime({
+                    targets: letter4,
+                    translateY: -250,
+                    translateX: -20,
+                    scale: 1,
+                    rotateZ: '2turn',
+                });
+                resolve();
+            }, 300)
+        });
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter5.classList.add('active');
+                anime({
+                    targets: letter5,
+                    translateY: -250,
+                    translateX: -30,
+                    scale: 1,
+                    rotateZ: '1turn',
+                });
+                resolve();
+            }, 300)
+        });
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter6.classList.add('active');
+                anime({
+                    targets: letter6,
+                    translateY: -250,
+                    translateX: -40,
+                    scale: 1,
+                    rotateZ: '1turn',
+                });
+                resolve();
+            }, 300)
+        });
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter7.classList.add('active');
+                anime({
+                    targets: letter7,
+                    translateY: -250,
+                    translateX: -50,
+                    scale: 1,
+                    rotateZ: '3turn',
+                });
+                resolve();
+            }, 300)
+        });
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter8.classList.add('active');
+                anime({
+                    targets: letter8,
+                    translateY: -250,
+                    scale: 3,
+                    duration: 500,
+                });
+                resolve();
+            }, 300)
+        });
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter9.classList.add('active');
+                anime({
+                    targets: letter9,
+                    translateY: -250,
+                    scale: 1,
+                    rotateZ: '3turn',
+
+                });
+                resolve();
+            }, 300)
+        });
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter10.classList.add('active');
+                anime({
+                    targets: letter10,
+                    translateY: -250,
+                    scale: 1,
+                    rotateZ: '3turn',
+                });
+                resolve();
+            }, 300)
+        });
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter11.classList.add('active');
+                anime({
+                    targets: letter11,
+                    translateY: -250,
+                    scale: 1,
+                    rotateZ: '3turn',
+                });
+                resolve();
+            }, 300)
+        });
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter12.classList.add('active');
+                anime({
+                    targets: letter12,
+                    translateY: -250,
+                    scale: 1,
+                    rotateZ: '3turn',
+                });
+                resolve();
+            }, 300)
+        });
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter13.classList.add('active');
+                anime({
+                    targets: letter13,
+                    translateY: -250,
+                    scale: 1,
+                    rotateZ: '3turn',
+                });
+                resolve();
+            }, 300)
+        });
+    }).then(() => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                letter14.classList.add('active');
+                anime({
+                    targets: letter14,
+                    translateY: -250,
+                    scale: 1,
+                    rotateZ: '3turn',
+                });
+                resolve();
+            }, 300)
+        });
     })
+</script>
+<script>
+
 </script>
 </body>
 </html>
